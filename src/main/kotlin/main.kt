@@ -4,7 +4,7 @@ fun main() {
     val contaRubens = Conta()
     contaRubens.titular = "Rubens"
     contaRubens.numero = 1001
-    contaRubens.saldo = 100.0
+    contaRubens.deposita(100.0)
     println(contaRubens.titular)
     println(contaRubens.numero)
     println(contaRubens.saldo)
@@ -12,7 +12,7 @@ fun main() {
     val contaFran = Conta()
     contaFran.titular = "Fran"
     contaFran.numero = 1002
-    contaFran.saldo = 200.0
+    contaFran.deposita(200.0)
     println(contaFran.titular)
     println(contaFran.numero)
     println(contaFran.saldo)
@@ -50,9 +50,12 @@ class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
+        private set
 
     fun deposita(valor: Double){
-        saldo += valor
+        if (valor > 0) {
+            saldo += valor
+        }
     }
 
     fun saque(valor: Double){
