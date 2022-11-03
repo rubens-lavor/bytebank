@@ -18,23 +18,57 @@ fun main() {
     println(contaFran.saldo)
 
     println("depositando na conta do Rubens")
-    deposita(contaRubens, 50.0)
+    contaRubens.deposita(50.0)
     println(contaRubens.saldo)
 
     println("depositando na conta da Fran")
-    deposita(contaFran, 70.0)
+    contaFran.deposita(70.0)
     println(contaFran.saldo)
 
-}
+    println("sacando na conta do rubens")
+    contaRubens.saque(100.0)
+    println(contaRubens.saldo)
 
-fun deposita(conta: Conta, valor: Double){
-    conta.saldo += valor
+    println("sacando na conta da fran")
+    contaFran.saque(150.0)
+    println(contaFran.saldo)
+
+    println("transferencia da conta da fran para o rubens")
+
+    if (contaFran.transfere(contaRubens, 100.0)) {
+        println("transferencia realizada com sucesso")
+    } else {
+        println("não foi possível realizar a transferencia")
+    }
+
+    println(contaRubens.saldo)
+    println(contaFran.saldo)
+
 }
 
 class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
+
+    fun deposita(valor: Double){
+        saldo += valor
+    }
+
+    fun saque(valor: Double){
+        if (saldo >= valor) {
+            saldo -= valor
+        }
+    }
+
+    fun transfere(contaDestino: Conta, valor: Double): Boolean {
+        if (saldo >= valor) {
+            saque(valor)
+            contaDestino.deposita(valor)
+            return true
+        }
+        return false
+    }
 }
 
 fun testaCopiaEReferencia(){
