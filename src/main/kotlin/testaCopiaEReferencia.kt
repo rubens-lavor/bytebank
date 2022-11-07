@@ -3,7 +3,7 @@ fun testaCopiaEReferencia(){
     var numeroY = numeroX
     numeroY++
 
-    val contaJoao = Conta("João",1000)
+    val contaJoao = ContaCorrente("João",1000)
     contaJoao.titular = "João"
 
     var contaMaria = contaJoao
