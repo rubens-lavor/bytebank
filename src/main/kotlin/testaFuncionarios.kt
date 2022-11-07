@@ -52,8 +52,8 @@ fun testaFuncionarios() {
 
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(funcionario)
-    calculadora.registra(fran)
-    calculadora.registra(gui)
+     calculadora.registra(fran)
+     calculadora.registra(gui)
     calculadora.registra(maria)
 
     println("O total de bonificação: ${calculadora.total}")
