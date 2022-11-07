@@ -44,7 +44,7 @@ fun testaFuncionarios() {
     println("bonificação ${gui.bonificacao}")
     println("plr ${gui.plr}")
 
-    if (fran.autenticacao(123)) {
+    if (fran.autentica(123)) {
         println("autenticou com sucesso")
     } else {
         println("falha na autenticação")
@@ -52,8 +52,8 @@ fun testaFuncionarios() {
 
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(funcionario)
-     calculadora.registra(fran)
-     calculadora.registra(gui)
+    calculadora.registra(fran)
+    calculadora.registra(gui)
     calculadora.registra(maria)
 
     println("O total de bonificação: ${calculadora.total}")
