@@ -1,3 +1,5 @@
+package modelo
+
 class Diretor(
     nome: String,
     cpf: String,

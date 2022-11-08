@@ -1,3 +1,7 @@
+package modelo
+
+import modelo.Funcionario
+
 abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,
