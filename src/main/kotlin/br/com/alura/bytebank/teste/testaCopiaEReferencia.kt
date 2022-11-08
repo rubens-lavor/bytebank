@@ -1,4 +1,4 @@
-import modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaCorrente
 
 fun testaCopiaEReferencia(){
     val numeroX = 10

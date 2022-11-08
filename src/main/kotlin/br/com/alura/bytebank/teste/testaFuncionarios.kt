@@ -1,7 +1,7 @@
-import modelo.Analista
-import modelo.CalculadoraBonificacao
-import modelo.Diretor
-import modelo.Gerente
+import br.com.alura.bytebank.modelo.Analista
+import br.com.alura.bytebank.modelo.CalculadoraBonificacao
+import br.com.alura.bytebank.modelo.Diretor
+import br.com.alura.bytebank.modelo.Gerente
 
 fun testaFuncionarios() {
     val funcionario = Analista(

@@ -1,13 +1,11 @@
-package modelo
+package br.com.alura.bytebank.modelo
 
-import modelo.Autenticavel
-import modelo.FuncionarioAdmin
-
-class Gerente(
+class Diretor(
     nome: String,
     cpf: String,
     salario: Double,
-    senha: Int
+    senha: Int,
+    val plr: Double
 ) : FuncionarioAdmin(
     nome,
     cpf,
@@ -17,6 +15,7 @@ class Gerente(
 
     override val bonificacao: Double
         get() {
-            return salario
+            return salario + plr
         }
+
 }
