@@ -1,4 +1,8 @@
+import br.com.alura.bytebank.modelo.Conta
+
 fun main() {
 
-    testaAutenticacao()
+    testaContasDiferentes()
+
+    println("Total de contas: ${Conta.total}")
 }
