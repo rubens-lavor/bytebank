@@ -1,4 +1,4 @@
-package collections.list
+package br.com.alura.list
 
 fun main() {
     val livro1 = Livro(

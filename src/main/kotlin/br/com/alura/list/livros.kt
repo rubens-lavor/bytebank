@@ -1,4 +1,4 @@
-package collections.list
+package br.com.alura.list
 
 val listaDeLivros = mutableListOf(
     Livro(

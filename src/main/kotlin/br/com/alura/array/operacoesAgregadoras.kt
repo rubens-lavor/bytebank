@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.array
 
 fun operacoesAgregadoras(){
     val idades: IntArray = intArrayOf(10, 12, 18, 33, 40, 67)

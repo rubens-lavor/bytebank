@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.array
 
 fun aumentoSalarial(){
     val salarios: DoubleArray = doubleArrayOf(

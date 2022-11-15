@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.collections
 
 fun testaCopia() {
     val banco = BancoDeNomes()

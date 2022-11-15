@@ -1,4 +1,4 @@
-package collections.list
+package br.com.alura.list
 
 fun main() {
     val prateleira = Prateleira(genero = "Literatura", livros = listaDeLivros)

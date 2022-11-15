@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.array
 
 fun exemploRanges(){
     val serie: IntRange = 1.rangeTo(10)

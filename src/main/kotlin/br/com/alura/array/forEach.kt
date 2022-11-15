@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.array
 
 fun maiorIdadeMenorIdade(){
     val idades: IntArray = intArrayOf(25,19,33,20,55,40)

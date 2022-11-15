@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.collections
 
 fun testaSet() {
     val assistiramCursoAndroid: Set<String> = setOf("alex", "fran", "gui", "maria")

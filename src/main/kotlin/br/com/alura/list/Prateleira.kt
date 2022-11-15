@@ -1,4 +1,4 @@
-package collections.list
+package br.com.alura.list
 
 class Prateleira (
     val genero: String,

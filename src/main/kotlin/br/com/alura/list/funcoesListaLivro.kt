@@ -1,4 +1,4 @@
-package collections.list
+package br.com.alura.list
 
 fun List<Livro?>.imprimeComMarcadores() {
     val textoFormatado = this

@@ -1,4 +1,4 @@
-package collections
+package br.com.alura.array
 
 import java.math.BigDecimal
 import java.math.RoundingMode
