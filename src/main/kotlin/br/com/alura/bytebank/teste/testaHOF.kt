@@ -9,19 +9,34 @@ fun testaHOF() {
         println(it)
     }
 
+    somaReceiver(a = 5, b = 5, resultado = (::println))
+    somaReceiver(a = 5, b = 5, resultado = {
+        println(this)
+    })
+
     val autenticavel = object : Autenticavel {
         val senha = 1234
         override fun autentica(senha: Int) = this.senha == senha
     }
 
-    SistemaInterno().entra(
+    val sistema = SistemaInterno()
+    sistema.entra(
         admin = autenticavel,
         senha = 1234,
         autenticado = {
             println("Realizar pagamento")
         }
     )
+
+    sistema.entraReceiver(autenticavel, 1234) {
+        pagamento()
+    }
 }
 
 // higher order function -> função que recebe ou retorna outra função
 fun soma(a: Int, b: Int, resultado: (Int) -> Unit ) = resultado(a + b)
+
+fun somaReceiver(a: Int, b: Int, resultado: Int.() -> Unit ) {
+    val total = a + b
+    total.resultado()
+}
